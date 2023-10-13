@@ -1,0 +1,22 @@
+                                                 /*Use of ForLoop*/
+                                                 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ForLoop
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            for(int i=1;i<=5;i++)
+            {
+                Console.WriteLine("forLoop {0}",i);
+                Console.ReadLine();
+            }
+        }
+    }
+}                                                
