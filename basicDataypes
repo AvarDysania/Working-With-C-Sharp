@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BasicUsedDatatypes
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            decimal my_dec = 2.0m;
+            float my_flo = 89.9f;
+            int my_int = 900;
+            long my_long = 1000000000000000000;
+            string my_string = "A CLASSICAL WORLD OF DRAGOONS";
+            char c= 'A';
+
+        }
+    }
+}
