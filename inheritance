@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace inheritance
+{
+    internal class Program
+    {
+        public class Travel
+        {
+            public int Total_Passengers = 12000;
+            public int Total_Accomodation = 12050;
+
+            public void message()
+            {
+                Console.WriteLine("\t\t\tTHE TRAIN THROUGH WORLD\t\t\t");
+            }
+            public void Travel_info()
+            {
+                Console.WriteLine($"Total Accomodation => : {this.Total_Accomodation} ");
+                Console.WriteLine($"Total Passengers   => : {this.Total_Passengers}");
+                Console.ReadLine();
+            }
+
+        }
+
+        public class Destination1:Travel
+        {
+            public void D1Travel(int Total)
+            {
+                int a = Total;
+                Console.WriteLine("This Road will take you to Singapore");
+                
+                Console.WriteLine("Travel Size is          : {0}",a);
+                Console.WriteLine("Total Passengers Left   : {0}",this.Total_Passengers-a);
+                Console.WriteLine("Total Accomodation Left : {0}",this.Total_Accomodation-a);
+                Console.ReadLine();
+            }
+        }
+        public class Destination2:Travel
+        {
+            public void D2Travel(int Total)
+            {
+                int a = Total;
+                Console.WriteLine("This Road will take you to Dubai");
+                Console.WriteLine("Travel Size is : {0}", a);
+                Console.WriteLine("Total Passengers Left : {0}", this.Total_Passengers - a);
+                Console.WriteLine("Total Accomodation Left : {0}", this.Total_Accomodation - a);
+                Console.ReadLine();
+            }
+        }
+        public class Destination3 : Travel
+        {
+            public void D3Travel(int Total)
+            {
+                int a = Total;
+                Console.WriteLine("This Road will take you to Austin , Texas");
+                Console.WriteLine("Travel Size is : {0}", a);
+                Console.WriteLine("Total Passengers Left : {0}", this.Total_Passengers - a);
+                Console.WriteLine("Total Accomodation Left : {0}", this.Total_Accomodation - a);
+                Console.ReadLine();
+            }
+        }
+        public class Destination4 : Travel
+        {
+            public void D4Travel(int Total)
+            {
+                int a = Total;
+                Console.WriteLine("This Road will take you to London");
+                Console.WriteLine("Travel Size is : {0}", a);
+                Console.WriteLine("Total Passengers Left : {0}", this.Total_Passengers - a);
+                Console.WriteLine("Total Accomodation Left : {0}", this.Total_Accomodation - a);
+                Console.ReadLine();
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Travel travs = new Travel();
+            travs.message();
+            travs.Travel_info();
+            
+            
+
+            Destination1 Destination1 = new Destination1();
+            Destination2 Destination2 = new Destination2();
+            Destination3 Destination3 = new Destination3();
+            Destination4 Destination4 = new Destination4();
+            Destination1.D1Travel(8000);
+            Destination2.D2Travel(6000);
+            Destination3.D3Travel(11000);
+            Destination4.D4Travel(10000);
+
+        }
+    }
+}
