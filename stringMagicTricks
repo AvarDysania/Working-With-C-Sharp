@@ -1,0 +1,42 @@
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StringTricks
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*********************************************************************/
+            string[] my_String = { "The Power Of Israel" , "Above The Sky"};
+            String s = String.Join("*", my_String);
+            string g = "  Barista";
+            Console.WriteLine("The Length of My String is {0}",my_String.Length);
+
+            Console.WriteLine(String.Join("*",my_String));
+            Console.WriteLine("Before trim {0} ",g);
+            Console.WriteLine("After trim {0}",g.Trim());
+
+
+            /*********************************************************************/
+            string ai = "IamAi";
+            for(int i= 0;i< ai.Length; i++)
+            {
+                if (ai[i]=='I') 
+                {
+                    Console.WriteLine(ai.Replace('I','T'));
+                }
+                
+            }
+         
+            Console.ReadLine();
+
+
+        }
+    }
+}
