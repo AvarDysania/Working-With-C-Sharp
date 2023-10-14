@@ -1,0 +1,66 @@
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TypesOfArray
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr1 = { 1, 2, 3, 4, 5 };
+            int[] arr2 = new int[] { 1, 2, 7, 9 };
+            string[] str1, str2;
+            str1 = new string[8]{ "Come" , "and" , "go","with","Halsey","near" ,"cross-road","mall"};
+            str2 = new string[2] { "Okkay I UnderStood", "Now i Can Write" };
+
+            float[] f1 = { 0.9f, 0.8f, 900.8f };
+            decimal[] d1 = { 90000.88776m, 78806.8761m, 88751, 12.999996m };
+
+            //*Accessing INTEGER Array Elements*//
+
+            Console.WriteLine("{0} {1} {2} {3}",arr2[0], arr2[1], arr1[3], arr1[1]);
+
+            for (int i = 0; i < arr2.Length;i++)
+            {
+                Console.WriteLine(arr2[i]);
+            }
+            
+
+            //*Accessing STRING Array Elements*//
+
+            Console.WriteLine("{0} {1} {2} {3}", str2[0], str1[3], str1[5], str1[7]);
+
+            for(int i=0;i< str2.Length;i++)
+            { Console.WriteLine(str2[i]); }
+
+            
+
+            //*Accessing FLOAT Array Elements*//
+
+            Console.WriteLine("{0} {1}", f1[1], f1[0]);
+            for(int i =0;i<f1.Length;i++)
+            {
+                Console.WriteLine(f1[i]);
+            }
+           
+
+            //*Accessing DECIMAl Array Elements*//
+
+            Console.WriteLine("{0} {1}", d1[1], d1[0]);
+            for (int i = 0; i < d1.Length; i++)
+            {
+                Console.WriteLine(d1[i]);
+            }
+
+
+
+
+            Console.ReadLine();
+        }
+    }
+}
