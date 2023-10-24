@@ -1,0 +1,88 @@
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UseOf_PROPERTIES
+{
+    internal class Program
+    {
+        class HarvardStudent
+        {
+            public int id;
+            public string name;
+            public int passmarks = 45;
+            
+
+            public int ID     //creating name of property
+            {
+                set
+                {
+                    if(value<0) //the value that will be provided 
+                    {
+                        throw new Exception("ID CANNOT BE LESS THAN ZERO");
+                    }
+                    else
+                    {
+                        this.id=value;//if everyting is okkay it will allocate the value from main
+                       
+                    }
+                }
+                get
+                {
+                    return this.id;  //returning the value from main
+                }
+                
+            }
+            public string NAME
+            {
+                set
+                {
+                    if(string.IsNullOrEmpty(value))   //if the value provided in the form of string is NULL then Exception is thrown
+                    {
+                        throw new Exception("Name Cannot Be NULL");
+                    }
+                    else
+                    {
+                        this.name=value;  //if the value is not null then set the value
+                    }
+                }
+                get
+                {
+                    if(string.IsNullOrEmpty(this.name))
+                    {
+                        Console.WriteLine("MISSING NAME");
+                    }
+                    return this.name;   
+                    
+                }
+            }
+            public int PASSMARKS //already settled
+            {
+                get
+                {
+                    return this.passmarks;
+                }
+            }
+            
+        }
+        static void Main(string[] args)
+        {
+            /*HERE THE INFO IS GIVEN FOR A STUDENT OF HARVARD UNIVERISTY 
+             * NAME :  ALEC MARSHALL */
+            HarvardStudent student = new HarvardStudent();
+
+            student.ID = 1;
+            student.NAME = "ALEC MARSHALL";
+
+            Console.WriteLine(student.id);
+            Console.WriteLine(student.name);
+            Console.WriteLine(student.passmarks);
+            
+            Console.ReadLine();
+        }
+    }
+}
